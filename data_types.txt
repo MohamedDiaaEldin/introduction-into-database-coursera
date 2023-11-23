@@ -1,0 +1,18 @@
+What are data types?
+Every column in a table has a data type. These data types are defined by SQL or Structured Query Language. A data type defines the type of value that can be stored in a table column. 
+
+For example, here are some of the data types that are available:
+
+Numeric data types such as INT, TINYINT, BIGINT, FLOAT, REAL. 
+
+Date and time data types such as DATE, TIME, DATETIME. 
+
+Character and string data types such as CHAR, VARCHAR. 
+
+Binary data types such as BINARY, VARBINARY. 
+
+Miscellaneous data types such as: 
+
+Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
+
+Binary Large Object (BLOB) for storing a collection of binary data such as images. 
