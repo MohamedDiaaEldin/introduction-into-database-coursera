@@ -1,0 +1,20 @@
+Order by with sing Columns
+    SELECT col1  
+    FROM table_name ORDER  
+    BY column_name  DESC;
+
+Order by with Multiple Columns 
+    SELECT col1  
+    FROM table_name ORDER  
+    BY column1_name, column2_name  DESC;
+
+
+Mix ORDER BY and WHERE 
+    SELECT * from customers 
+    where age > 22 
+    order by age, customer_id desc ;
+
+
+WHERE column_name LIKE 'Sc%'  --> start with Sc + any number of characters
+WHERE column_name IN('USA', 'UK)
+
