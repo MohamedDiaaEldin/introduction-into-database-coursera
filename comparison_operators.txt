@@ -1,0 +1,13 @@
+
+
+=    Checks for equality
+
+<>   or != Checks for not inequality
+
+>    Check if something is greater than
+
+>=    Check if something is greater than or equal
+
+<     Check if something is less than
+
+<=     Check if something is less than or equal

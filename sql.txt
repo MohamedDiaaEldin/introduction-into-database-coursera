@@ -50,3 +50,9 @@ Transaction Control Language (TCL)
 	COMMIT Command to save all the work you have already done in the database. 
 	ROLLBACK Command to restore a database to the last committed state.
 
+
+Insert Into Tables using Select 
+	INSERT INTO table2
+	SELECT * FROM table1
+	WHERE condition;
+
