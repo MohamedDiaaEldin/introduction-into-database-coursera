@@ -1,0 +1,66 @@
+Database normalization
+    
+    
+    First normal form 
+    -Data atomicity ensure that every column contains only one single value (to avoid data redundancy, data inconsistency)
+    EXAMPLE:
+        course_id , course_name, tutor_name, tutor surname, cell_phone, landline
+            1     , programming,   mohamed ,     m       ,   075236   , 0233363
+            2     , programming,   ali     ,     ali     ,   085265   , 0215659
+            3     , database,      mohamed ,     m       ,   075236   , 0233363
+        Because when we need to add more course i will need to repeat another data which is(tutor_name, tutor_surname, cell_phone, landline)
+        course_id 1 and 3 contains repeated data
+        will be :
+            Course Table -> course_id ,  course_name , tutor_name , tutor_id
+            Tutor Table  -> tutor_id,     tutor_name , tutor surname, cell_phone, landline
+
+    Second normal form 
+        - functional dependency
+        - partial dependency        
+    - EXAMPLE
+        patient_id, vaccine_id, vaccine_name, patient_name, status
+        will be :
+            Patient Table         ->  patient_id (pk) , patient_name
+            Vaccine Table         ->  vaccine_id (pk), vaccine_name
+            Vaccine_Status Table  ->  vaccine_id (pk), patient_id (pk), status
+
+    Third normal form 
+     -transitive dependency
+     Id, author, language, country, book_title 
+    will be : 
+        Books Table   ->   Id (pk), author, country, book_title 
+        Country Table ->  country (pk), language 
+
+
+Database normalization (long description)
+    - structuring tables that minimizes challenges Database systems.
+    - insert, update, delete anomaly challenges 
+
+How Database can be normalized 
+    - design by creating single purpose for each table. 
+
+First normal form  
+    To simplify the data structure of the surgery table, 
+    let’s apply the first normal form rules to enforce the data atomicity rule and eliminate 
+    unnecessary repeating data groups. The data atomicity rule means you can only 
+    have one single instance value of the column attribute in any table cell.
+
+
+
+Second normal form
+    In the second normal form, you must avoid partial dependency relationships between data.
+    Partial dependency refers to tables with a composite primary key. Namely,
+    a key that consists of a combination of two or more columns,
+    where a non-key attribute value depends only on one part of the composite key. 
+
+
+
+Third normal form  
+    For a relation in a database to be in the third normal form,
+    it must already be in the second normal form (2NF). In addition,
+    it must have no transitive dependency. This means that any non-key 
+    attribute in the surgery table may not be functionally dependent on
+    another non-key attribute in the same table. In the surgery table, the postcode and 
+    the council are non-key attributes, and the postcode depends on the council. Therefore, 
+    if you change the council value, you must also change the postcode. This is called transitive dependency, 
+    which is not allowed in the third normal form.
